@@ -122,7 +122,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
         "Null",
         "Sampling"
       ),
-      distribution = factor(.data$distribution, levels = c("Observed", "Null"))
+      distribution = factor(.data$distribution, levels = c("Sampling", "Null"))
     ) %>%
     ggplot(
       mapping = base_mapping
@@ -296,7 +296,7 @@ plot_loadings <- function(
       )
 
     subtitle = glue(
-      "Bootstraped Sampling and Permutation-Based Null Distributions"
+      ""
     )
 
   }
@@ -386,7 +386,7 @@ plot_loadings <- function(
     geom_text(aes(label = .data$loading_sign), size = 8, colour = "black") +
     scale_x_discrete(guide = guide_axis(angle = 90)) +
     scale_colour_manual(
-      values = c("Observed" = "#F8766D", "Null" = "#00BFC4")
+      values = c("Sampling" = "#F8766D", "Null" = "#00BFC4")
     ) +
     labs(
       title = glue("Index Loadings for PC{pc_no}"),
