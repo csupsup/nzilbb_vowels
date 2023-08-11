@@ -132,16 +132,15 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       width = 0.2
     ) +
     geom_point(colour = "red") +
-    scale_x_discrete(guide = guide_axis(angle = 90)) +
+    scale_x_discrete(guide = guide_axis(angle = 70)) +
     labs(
-      title = "Variance Explained by Principal Components",
-      colour = "Test Distribution",
-      x = "Principal Component",
-      y = glue("Variance Explained ({var_formant})"),
-      caption = glue(
-        "Bars indicate {pca_test$variance_confint * 100}% confidence intervals."
-      )
-    )
+      title = "",
+      colour = "",
+      x = "Principal component",
+      y = glue("Variance explained ({var_formant})"),
+      caption = glue("")
+    ) +
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.75, 0.9))
 
 }
 
