@@ -122,7 +122,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
         "Null",
         "Sampling"
       ),
-      distribution = factor(.data$distribution, levels = c("Sampling", "Null"))
+      distribution = factor(.data$distribution, levels = c("Observed", "Null"))
     ) %>%
     ggplot(
       mapping = base_mapping
@@ -140,7 +140,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       y = glue("Variance explained ({var_formant})"),
       caption = glue("")
     ) +
-    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.75, 0.9))
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9))
 
 }
 
@@ -386,15 +386,17 @@ plot_loadings <- function(
     geom_text(aes(label = .data$loading_sign), size = 8, colour = "black") +
     scale_x_discrete(guide = guide_axis(angle = 90)) +
     scale_colour_manual(
-      values = c("Sampling" = "#F8766D", "Null" = "#00BFC4")
+      values = c("Observed" = "#F8766D", "Null" = "#00BFC4")
     ) +
     labs(
       title = glue("Index Loadings for PC{pc_no}"),
       subtitle = subtitle,
-      colour = "Distribution",
-      y = "Index Loading",
-      x = "Variable"
-    )
+      colour = "",
+      y = "Index loading",
+      x = ""
+    ) +
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9))
+
 
   out_plot
 
