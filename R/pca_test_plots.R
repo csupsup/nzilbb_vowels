@@ -389,10 +389,10 @@ plot_loadings <- function(
       values = c("Sampling" = "#F8766D", "Null" = "#00BFC4")
     ) +
     labs(
-      title = glue("Index Loadings for "),
+      title = glue(""),
       subtitle = subtitle,
       colour = "",
-      y = "PC{pc_no} index loading",
+      y = glue("PC{pc_no} index loading"),
       x = ""
     ) +
     theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = "")
