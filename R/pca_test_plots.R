@@ -395,7 +395,7 @@ plot_loadings <- function(
       y = "Index loading",
       x = ""
     ) +
-    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9))
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = "")
 
 
   out_plot
