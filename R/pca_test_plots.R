@@ -140,7 +140,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       y = glue("Variance explained ({var_formant})"),
       caption = glue("")
     ) +
-    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9))
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9), axis.text=element_text(size=15), axis.title=element_text(size=15, face="bold"))
 
 }
 
@@ -395,7 +395,7 @@ plot_loadings <- function(
       y = glue("PC{pc_no} index loading"),
       x = ""
     ) +
-    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = "")
+    theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = "", axis.text=element_text(size=15), axis.title=element_text(size=15, face="bold"))
 
 
   out_plot
