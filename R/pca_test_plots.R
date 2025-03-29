@@ -384,7 +384,7 @@ plot_loadings <- function(
         ymax = .data$high_limit
       )
     ) +
-    # geom_point(colour = "red") +
+    geom_point(colour = "#003D73") +
     geom_text(aes(label = .data$loading_sign), size = 8, colour = "black") +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     scale_colour_manual(
