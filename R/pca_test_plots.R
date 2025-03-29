@@ -387,13 +387,13 @@ plot_loadings <- function(
     geom_text(aes(label = .data$loading_sign), size = 8, colour = "black") +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     scale_colour_manual(
-      values = c("Sampling" = "#F8766D", "Null" = "#00BFC4")
+      values = c("Sampling" = "#003D73", "Null" = "#66B2FF")
     ) +
     labs(
       title = glue(""),
       subtitle = subtitle,
       colour = "",
-      y = glue("PC{pc_no} index loading"),
+      y = glue("PC{pc_no} Index Loading"),
       x = ""
     ) +
     theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = "", 
