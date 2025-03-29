@@ -129,9 +129,11 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
     ) +
     geom_errorbar(
       mapping = error_mapping,
-      width = 0.2
+      width = 0.2,
+      aes(colour = .data$distribution)
     ) +
-    geom_point(colour = "#003D73") +
+    geom_point(aes(colour = .data$distribution)) +
+    scale_colour_manual(values = c("Sampling" = "#003D73", "Null" = "#66B2FF")) +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     labs(
       title = "",
