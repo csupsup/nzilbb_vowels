@@ -131,13 +131,13 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       mapping = error_mapping,
       width = 0.2
     ) +
-    geom_point(colour = "red") +
+    geom_point(colour = "#003D73") +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     labs(
       title = "",
       colour = "",
-      x = "Principal component",
-      y = glue("Variance explained ({var_formant})"),
+      x = "Principal Component",
+      y = glue("Variance Explained ({var_formant})"),
       caption = glue("")
     ) +
     theme(panel.background = element_blank(), axis.line = element_line(colour = "grey"),legend.key = element_blank(), legend.position = c(0.80, 0.9), 
