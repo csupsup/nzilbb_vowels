@@ -383,9 +383,9 @@ plot_loadings <- function(
       aes(
         ymin = .data$low_limit,
         ymax = .data$high_limit,
-        width = 0.5,
-        size = 0.1
-      )
+      ),
+      width = 0.5,
+      size = 1.0
     ) +
     # geom_point(colour = "#003D73") +
     geom_text(aes(label = .data$loading_sign), size = 8, colour = "#003D73") +
