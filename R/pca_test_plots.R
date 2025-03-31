@@ -129,7 +129,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
     ) +
     geom_errorbar(
       mapping = error_mapping,
-      width = 0.2,
+      width = 0.5,
       size = 1.0
     ) +
     geom_point(colour = "#003D73") +
@@ -382,7 +382,9 @@ plot_loadings <- function(
     geom_errorbar(
       aes(
         ymin = .data$low_limit,
-        ymax = .data$high_limit
+        ymax = .data$high_limit,
+        width = 0.5,
+        size = 1.0
       )
     ) +
     # geom_point(colour = "#003D73") +
