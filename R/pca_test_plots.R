@@ -384,7 +384,7 @@ plot_loadings <- function(
         ymin = .data$low_limit,
         ymax = .data$high_limit,
         width = 0.5,
-        size = 1.0
+        size = 0.2
       )
     ) +
     # geom_point(colour = "#003D73") +
