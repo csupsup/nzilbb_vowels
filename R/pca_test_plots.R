@@ -398,7 +398,7 @@ plot_loadings <- function(
       x = ""
     ) +
     theme(panel.background = element_blank(), axis.line = element_line(colour = "black"),legend.key = element_blank(), legend.position = "", 
-          axis.text=element_text(size=15), axis.title=element_text(size=15), legend.text = element_text(size=12))
+          axis.text=element_text(size=15), axis.title=element_text(size=15), legend.text = element_text(size=15))
 
 
   out_plot
