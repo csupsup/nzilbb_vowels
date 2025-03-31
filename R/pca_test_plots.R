@@ -142,7 +142,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       caption = glue("")
     ) +
     theme(panel.background = element_blank(), axis.line = element_line(colour = "black"),legend.key = element_blank(), legend.position = c(0.80, 0.9), 
-          axis.text=element_text(size=15), axis.title=element_text(size=15), legend.text = element_text(size=12))
+          axis.text=element_text(size=15), axis.title=element_text(size=15), legend.text = element_text(size=15))
 
 }
 
