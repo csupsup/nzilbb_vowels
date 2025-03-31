@@ -129,7 +129,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
     ) +
     geom_errorbar(
       mapping = error_mapping,
-      width = 0.2
+      width = 0.5
     ) +
     geom_point(colour = "#003D73") +
     scale_colour_manual(values = c("Sampling" = "#003D73", "Null" = "#66B2FF")) +
