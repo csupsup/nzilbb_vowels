@@ -387,8 +387,8 @@ plot_loadings <- function(
       width = 0.5,
       size = 1.0
     ) +
-    geom_point(colour = "#EA7171") +
-    geom_text(aes(label = .data$loading_sign), size = 8, colour = "#003D73") +
+    #geom_point(colour = "#EA7171") +
+    geom_text(aes(label = .data$loading_sign), size = 8, colour = "#EA7171") +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     scale_colour_manual(
       values = c("Sampling" = "#003D73", "Null" = "#66B2FF")
