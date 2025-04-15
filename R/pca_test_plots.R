@@ -132,7 +132,7 @@ plot_variance_explained <- function(pca_test, pc_max = NA, percent = TRUE) {
       width = 0.5,
       size = 1.0
     ) +
-    geom_point(colour = "#EA7171") +
+    geom_point(colour = "#003D73") +
     scale_colour_manual(values = c("Sampling" = "#003D73", "Null" = "#66B2FF")) +
     scale_x_discrete(guide = guide_axis(angle = 70)) +
     labs(
